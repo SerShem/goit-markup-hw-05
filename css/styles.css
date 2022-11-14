@@ -149,6 +149,7 @@ a {
 
 	transition-property: color;
 	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link-nav:focus,
@@ -202,6 +203,7 @@ a {
 
 	transition-property: color;
 	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link-address:focus,
@@ -273,6 +275,7 @@ a {
 
 	transition-property: color;
 	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link:hover,
@@ -313,6 +316,7 @@ a {
 
 	transition-property: background;
 	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-soc-link:focus,
@@ -367,6 +371,7 @@ a {
 
 	transition-property: box-shadow;
 	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .super-button:hover {
@@ -417,6 +422,7 @@ a {
 
 	transition-property: color;
 	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .emblem-benefist-link:focus,
@@ -441,24 +447,21 @@ a {
 	position: relative;
 }
 
-.benefits-picture-box {
-	background: rgba(47, 48, 58, 0.8);
+.benefits-picture-box-text {
+	position: absolute;
+	bottom: 0;
+	
+	font-weight: 700;
+	line-height: 16px;
+	text-transform: uppercase;
 	width: 100%;
 	height: 70px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: absolute;
-	bottom: 0;
-}
-
-.benefits-picture-box-text {
-	font-weight: 700;
-	line-height: 16px;
-	text-align: center;
-	text-transform: uppercase;
-
+	
 	color: var(--color-maxwite);
+	background: rgba(47, 48, 58, 0.8);
 }
 
 .text-benefits {
@@ -537,6 +540,7 @@ a {
 
 	transition-property: background, fill;
 	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-cart-soc-link:focus,
@@ -568,6 +572,7 @@ a {
 
 	transition-property: border-color, fill;
 	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-soc-link:hover,
@@ -634,6 +639,7 @@ a {
 
 	transition-property: background, color, box-shadow;
 	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-button:hover,
@@ -691,9 +697,14 @@ a {
 
 	transform: translatey(101%);
 	transition: transform 250ms ease;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-cart-link:hover .portfolio-cart-modal {
+	transform: translatey(0%);
+}
+
+.portfolio-cart-link:focus .portfolio-cart-modal {
 	transform: translatey(0%);
 }
 
@@ -713,11 +724,12 @@ a {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.2);
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .backdrop.is-hidden {
 	opacity: 0;
-	pointer-events: none;
+	pointer-events: none; 
 }
 
 .backdrop-modal {
